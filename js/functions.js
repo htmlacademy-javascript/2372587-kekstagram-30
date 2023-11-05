@@ -7,17 +7,14 @@ const stringLenght = (string, quantity) => {
     return 'false';
   }
 };
-console.log (stringLenght('Проверяем работу',16));
+stringLenght('Проверяем работу',16);
+
 
 //Функция для проверки, является ли строка палиндромом.
 const palindrome = (string) => {
-  let normalString = string.replaceAll(' ', '').toLowerCase();
-  let reverseString = normalString.split('').reverse().join('');
-  if (normalString === reverseString) {
-    console.log('Строка - палиндром');
-  } else {
-    console.log('Строка - не палиндром');
-  }
+  const normalString = string.replaceAll(' ', '').toLowerCase();
+  const reverseString = normalString.split('').reverse().join('');
+  return reverseString === normalString;
 };
 
 // Здесь вызовы функций
